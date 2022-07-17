@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Practica_JS</title>
+    <meta name="Description" content="Codigo de practica JavaScript">
+    <meta name="Keywords" content="">
+    <meta name="Author" content="Lauren Ortiz Gomez">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="estilo.css">
+
+
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+
+    <header class="row mt-3">
+        <h1 class="text-center">Tarea de #6 JavaScript</h1>
+    </header>
+    <br>
+
+    <main class="row ms-5 me-5">
+
+
+        <div class="mb-3">
+            <label for="cbo" class="form-label">Destinos disponibles</label>
+            <select class="form-select" id="cboPaises">
+                <option></option>
+                <option>Qatar</option>
+                <option>Costa Rica</option>
+                <option>Japón</option>
+                <option>Rusia</option>
+                <option>USA</option>
+            </select>
+
+            <button type="button" class="btn btn-success mb-3"
+                onclick="_switch(document.getElementById('cboPaises').value)">Precio</button>
+
+            <button type="button" class="btn btn-success mb-3"
+                onclick="seleccion(document.getElementById('cboPaises').value)">Seleccionar</button>
+
+            <button type="button" class="btn btn-warning mb-3" onclick="bucle()">Recorrer lista</button>
+
+        </div>
+
+
+        <label>Motivo de viaje</label>
+        <div class="mb-3">
+            <textarea name="txaMotivo" id="txaM" class="form-control" cols="15" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <button id="btnMayuscula" type="button" class="btn btn-success mb-3"
+                onclick="formatearTexto(document.getElementById('btnMayuscula').innerHTML, document.getElementById('txaM').value, document.getElementById('txaM'))">Mayúscula</button>
+            <button id="btnMinuscula" type="button" class="btn btn-success mb-3"
+                onclick="formatearTexto(document.getElementById('btnMinuscula').innerHTML, document.getElementById('txaM').value, document.getElementById('txaM'))">Minúscula</button>
+            <button id="btnTamanio" type="button" class="btn btn-warning mb-3"
+                onclick="formatearTexto(document.getElementById('btnTamanio').innerHTML, document.getElementById('txaM').value, document.getElementById('txaM'))">Tamaño</button>
+        </div>
+
+
+
+        <div class="col-sm-12 col-md-4 col-lg-4" action="">
+            <h5>Cantidad de voletos </h5>
+            <div class="mb-3">
+                <label for="cantBoletos" class="form-label">Numeral</label>
+                <input type="number" class="form-control" id="cantBoletos">
+            </div>
+
+            <button id="error" type="button" class="btn btn-success mb-3"
+                onclick="Excepcion(document.getElementById('cantBoletos').value)">comprar</button>
+        </div>
+
+        <div>
+            <label>Fecha de facturación </label>
+            <button id="Fecha" type="button" class="btn btn-secondary"
+                onclick="objetos(document.getElementById('Fecha').innerHTML)">Fecha</button>
+        </div>
+
+    </main>
+
+
+    <div>
+        <footer >
+
+            <credit>&copy; Derechos Reservados <span id="year"></span></credit>
+            <div id="autor"></div>
+            <div id="date"></div>
+
+            <script>
+                document.getElementById('autor').innerHTML = "Lauren Ortiz Gomez";
+                document.getElementById("date").innerHTML = new Date().toDateString();
+                document.getElementById("year").innerHTML = new Date().getFullYear().toString();      
+            </script>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+
+
+    <script src="codigo.js"></script>
+
+
+
+</body>
+
+</html>
